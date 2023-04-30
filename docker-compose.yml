@@ -1,0 +1,13 @@
+version: '3'
+services:
+  hookupup-feishu:
+    build: .
+    image: yveeven/hookupup-feishu:latest
+    ports:
+      - '3000:3000'
+    environment:
+      TZ: Asia/Shanghai
+      FORWARD_URL:
+
+    volumes:
+      - .:/app
